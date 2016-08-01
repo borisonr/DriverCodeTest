@@ -4,7 +4,7 @@ fs.readFile(file, 'utf8', function(err, data){
 	if(err) throw err;
 	var dataArr = data.toString().replace(/\s+/g, "").replace(/(>Rosalind_\d{4})/g, " ").split(" ")
 	dataArr.shift();
-	dnaMatch(dataArr);
+	return dnaMatch(dataArr);
 });
 
 function dnaMatch (stringArr){
